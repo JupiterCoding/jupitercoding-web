@@ -62,17 +62,34 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: 400px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            max-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-bottom: 2px solid rgba(0, 217, 255, 0.3);
         }
 
+        @media (max-width: 1024px) {
+            .banner {
+                aspect-ratio: 16 / 9;
+                max-height: 500px;
+            }
+        }
+
         @media (max-width: 768px) {
             .banner {
-                min-height: 250px;
+                aspect-ratio: 16 / 9;
+                max-height: 350px;
                 background-attachment: scroll;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner {
+                aspect-ratio: 16 / 9;
+                max-height: 280px;
             }
         }
 
