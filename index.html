@@ -57,28 +57,44 @@
             color: #00d9ff;
         }
 
-        .hero {
-            background: linear-gradient(rgba(10, 14, 39, 0.5), rgba(10, 14, 39, 0.5)), url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663111716143/CtJMHKNNrujfZjMO.webp');
+        .banner {
+            background: linear-gradient(rgba(10, 14, 39, 0.3), rgba(10, 14, 39, 0.3)), url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663111716143/CtJMHKNNrujfZjMO.webp');
             background-size: cover;
             background-position: center;
-            padding: 6rem 2rem;
-            text-align: center;
+            background-attachment: fixed;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                min-height: 250px;
+                background-attachment: scroll;
+            }
+        }
+
+        .hero {
+            padding: 3rem 2rem;
+            text-align: center;
         }
 
         .hero h1 {
             font-family: 'Space Mono', monospace;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            background: linear-gradient(135deg, #00d9ff, #b300ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #ffffff;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 1rem;
         }
 
         .about {
@@ -187,7 +203,11 @@
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
             }
 
             nav ul {
@@ -206,6 +226,8 @@
             <li><a href="impressum.html">Impressum</a></li>
         </ul>
     </nav>
+
+    <section class="banner"></section>
 
     <section class="hero">
         <h1>JupiterCoding</h1>
