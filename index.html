@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JupiterCoding - Software Development and Web Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0e27;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d9ff, #b300ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d9ff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(179, 0, 255, 0.1));
+            padding: 6rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d9ff, #b300ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .about {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #00d9ff;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #c0c0c0;
+        }
+
+        .apps {
+            padding: 4rem 2rem;
+            background: rgba(0, 217, 255, 0.05);
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .apps-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .apps h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #00d9ff;
+            text-align: center;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .app-card {
+            background: rgba(20, 30, 60, 0.8);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .app-card:hover {
+            border-color: #00d9ff;
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .app-card h3 {
+            font-family: 'Space Mono', monospace;
+            color: #b300ff;
+            margin-bottom: 1rem;
+        }
+
+        .app-card p {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
+        }
+
+        .app-status {
+            font-size: 0.9rem;
+            color: #00d9ff;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #050810;
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            color: #808080;
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #00d9ff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">JupiterCoding</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>JupiterCoding</h1>
+        <p>Software Development and Web Solutions</p>
+        <p style="color: #909090; font-size: 1rem;">Innovative Android Apps und moderne Weblösungen</p>
+    </section>
+
+    <section class="about" id="about">
+        <h2>Über uns</h2>
+        <p>JupiterCoding ist ein innovatives Entwickler-Studio, das sich auf die Erstellung hochwertiger Android-Anwendungen und moderner Weblösungen spezialisiert. Unser Fokus liegt auf benutzerfreundlichem Design, performanter Technik und zukunftsorientierten Lösungen.</p>
+        <p>Mit modernen Technologien und kreativem Ansatz entwickeln wir Apps und Websites, die Ihre Anforderungen erfüllen und Ihre Nutzer begeistern.</p>
+    </section>
+
+    <section class="apps" id="apps">
+        <div class="apps-container">
+            <h2>Unsere Apps</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <h3>Simple Browser</h3>
+                    <p>Ein schlanker und benutzerfreundlicher Webbrowser für Android mit modernem Design und optimierter Performance.</p>
+                    <div class="app-status">✓ Verfügbar im Play Store</div>
+                </div>
+                <div class="app-card">
+                    <h3>PDF Viewer Pro</h3>
+                    <p>Ein professioneller PDF-Viewer mit erweiterten Funktionen zur Anzeige und Bearbeitung von PDF-Dokumenten.</p>
+                    <div class="app-status">📋 Demnächst im Play Store</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 JupiterCoding. Alle Rechte vorbehalten.</p>
+            <div>
+                <a href="impressum.html">Impressum</a>
+                <a href="#datenschutz">Datenschutz</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem;">Entwickelt mit modernen Technologien und Leidenschaft für Innovation.</p>
+        </div>
+    </footer>
+</body>
+</html>
