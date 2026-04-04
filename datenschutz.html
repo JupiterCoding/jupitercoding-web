@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - JupiterCoding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0e27;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #00d9ff;
+        }
+
+        @media (min-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+                justify-content: space-between;
+            }
+
+            .logo {
+                display: block;
+                font-family: 'Space Mono', monospace;
+                font-size: 1.5rem;
+                font-weight: 700;
+                background: linear-gradient(135deg, #00d9ff, #b300ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            nav ul {
+                gap: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(179, 0, 255, 0.1));
+            padding: 3rem 1.5rem;
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #00d9ff, #b300ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .content h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.5rem;
+            color: #00d9ff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid #b300ff;
+            padding-left: 1rem;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            color: #c0c0c0;
+        }
+
+        .content li {
+            margin-left: 2rem;
+            margin-bottom: 0.5rem;
+            color: #c0c0c0;
+        }
+
+        .content ul {
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #00d9ff;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #b300ff;
+            transform: translateX(-5px);
+        }
+
+        footer {
+            background: rgba(10, 14, 39, 0.8);
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: #808080;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #00d9ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #b300ff;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">JupiterCoding</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#apps">Apps</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Datenschutzerklärung</h1>
+    </div>
+
+    <div class="content">
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+
+        <h2>1. Allgemeine Hinweise</h2>
+        <p>Der Schutz Ihrer persönlichen Daten ist mir ein wichtiges Anliegen. In dieser Datenschutzerklärung informiere ich Sie darüber, welche personenbezogenen Daten auf dieser Website erhoben und wie sie verwendet werden.</p>
+
+        <h2>2. Verantwortlicher</h2>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
+        <p>JupiterCoding</p>
+        <p>[Adresse]</p>
+        <p>[E-Mail-Adresse]</p>
+
+        <h2>3. Erhebung und Speicherung personenbezogener Daten sowie Art und Zweck von deren Verwendung</h2>
+        <p><strong>a) Beim Besuch der Website</strong></p>
+        <p>Beim Aufrufen dieser Website werden durch den Hosting-Anbieter (GitHub Pages) automatisch Informationen erfasst. Dies sind z. B.:</p>
+        <ul>
+            <li>IP-Adresse</li>
+            <li>Datum und Uhrzeit der Anfrage</li>
+            <li>Browsertyp und Version</li>
+            <li>Betriebssystem</li>
+        </ul>
+        <p>Diese Daten dienen ausschließlich der technischen Bereitstellung und Sicherheit der Website und werden nicht mit anderen Datenquellen zusammengeführt.</p>
+
+        <p><strong>b) Kontaktformular (EmailJS)</strong></p>
+        <p>Wenn Sie mir über das Kontaktformular Anfragen senden, werden Ihre Angaben aus dem Formular (z. B. Name, E-Mail-Adresse und Nachricht) zur Bearbeitung der Anfrage verarbeitet.</p>
+        <p>Die Verarbeitung erfolgt über den Dienst EmailJS, bereitgestellt von:</p>
+        <p>EmailJS Inc.</p>
+        <p>Die Daten werden an EmailJS übermittelt und dort verarbeitet, um die Nachricht per E-Mail zuzustellen.</p>
+        <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertrag / vorvertragliche Anfrage)</p>
+
+        <h2>4. Weitergabe von Daten</h2>
+        <p>Eine Übermittlung Ihrer persönlichen Daten an Dritte findet nur statt, wenn:</p>
+        <ul>
+            <li>dies zur Bearbeitung Ihrer Anfrage erforderlich ist</li>
+            <li>eine gesetzliche Verpflichtung besteht</li>
+            <li>Sie ausdrücklich eingewilligt haben</li>
+        </ul>
+
+        <h2>5. Speicherdauer</h2>
+        <p>Ihre personenbezogenen Daten werden nur so lange gespeichert, wie dies zur Bearbeitung Ihrer Anfrage erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p>
+
+        <h2>6. Ihre Rechte</h2>
+        <ul>
+            <li>Auskunft über Ihre gespeicherten Daten zu erhalten (Art. 15 DSGVO)</li>
+            <li>Berichtigung unrichtiger Daten zu verlangen (Art. 16 DSGVO)</li>
+            <li>Löschung Ihrer Daten zu verlangen (Art. 17 DSGVO)</li>
+            <li>Einschränkung der Verarbeitung zu verlangen (Art. 18 DSGVO)</li>
+            <li>Widerspruch gegen die Verarbeitung einzulegen (Art. 21 DSGVO)</li>
+            <li>Datenübertragbarkeit zu verlangen (Art. 20 DSGVO)</li>
+        </ul>
+
+        <h2>7. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.</p>
+
+        <h2>8. SSL- bzw. TLS-Verschlüsselung</h2>
+        <p>Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung.</p>
+
+        <h2>9. Hosting über GitHub Pages</h2>
+        <p>Diese Website wird über GitHub Pages gehostet. Anbieter ist:</p>
+        <p>GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.</p>
+        <p>Es kann nicht ausgeschlossen werden, dass Daten in die USA übertragen werden. GitHub verwendet Standardvertragsklauseln gemäß DSGVO.</p>
+
+        <h2>10. Aktualität und Änderung dieser Datenschutzerklärung</h2>
+        <p>Diese Datenschutzerklärung ist aktuell gültig und hat den Stand: [Datum einfügen].</p>
+        <p>Ich behalte mir vor, sie bei Bedarf anzupassen.</p>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <p>&copy; 2026 JupiterCoding. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
