@@ -212,6 +212,93 @@
             font-weight: 600;
         }
 
+        .contact {
+            background: #0a0e27;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 2px solid rgba(0, 217, 255, 0.3);
+            border-bottom: 2px solid rgba(0, 217, 255, 0.3);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #00d9ff, #b300ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact p {
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            color: #e0e0e0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        #contact-form input::placeholder,
+        #contact-form textarea::placeholder {
+            color: #606060;
+        }
+
+        #contact-form input:focus,
+        #contact-form textarea:focus {
+            outline: none;
+            border-color: #00d9ff;
+            background: rgba(0, 217, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
+        }
+
+        #contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        #contact-form button {
+            background: linear-gradient(135deg, #00d9ff, #b300ff);
+            color: #0a0e27;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #contact-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
+        }
+
+        #contact-form button:active {
+            transform: translateY(-1px);
+        }
+
         footer {
             background: #050810;
             border-top: 1px solid rgba(0, 217, 255, 0.2);
@@ -303,6 +390,19 @@
         </div>
     </section>
 
+    <section class="contact" id="kontakt">
+        <div class="contact-container">
+            <h2>Kontaktieren Sie uns</h2>
+            <p>Haben Sie Fragen oder möchten Sie mit uns zusammenarbeiten? Schreiben Sie uns eine Nachricht!</p>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Nachricht" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <p>&copy; 2026 JupiterCoding. Alle Rechte vorbehalten.</p>
@@ -314,5 +414,24 @@
             <p style="margin-top: 2rem; font-size: 0.9rem;">Entwickelt mit modernen Technologien und Leidenschaft für Innovation.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("x9OXxTpV0jma0ohDo");
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_0xvopm", "template_3r5sytl", this)
+                .then(function() {
+                    alert("Nachricht erfolgreich gesendet!");
+                    document.getElementById("contact-form").reset();
+                }, function(error) {
+                    alert("Fehler beim Senden: " + error.text);
+                });
+        });
+    </script>
 </body>
 </html>
